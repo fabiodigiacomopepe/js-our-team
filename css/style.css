@@ -5,12 +5,42 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #f5f5f1;
+    padding: 50px 0 0;
+}
+
+/* Regole titolo e sottotitolo */
+h1,
+.subtitle {
+    font-size: 20px;
+    text-align: center;
+    margin: 0 auto 20px;
+    width: 60%;
+    line-height: 1.5;
+}
+
 /* Regole output */
 #output {
     padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
 }
 
-/* Regole ogni 3 div (per spazieggiatura tra membri del team) */
-div:nth-child(3n+0) {
-    margin-bottom: 50px;
+#output > div {
+    width: 25%;
+    background-color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+img {
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+#output > div > :nth-child(3n+0) {
+    margin-bottom: 25px;
 }

@@ -71,10 +71,10 @@ for (let i = 0; i < membriTeam.length; i++) {
     for (let chiave in oggettoN) {              // Creo ciclo per estrapolare le KEY dagli oggetti in array 
         console.log(oggettoN[chiave]);          // Loggo informazioni
     }
-    elOutput.innerHTML += `<div class="n${i}">${oggettoN.nome}</div>`;      // Inietto in elOutput, DIV contenente stringa con valore della KEY NOME
-    elOutput.innerHTML += `<div class="n${i}">${oggettoN.ruolo}</div>`;     // Inietto in elOutput, DIV contenente stringa con valore della KEY RUOLO
     let foto = oggettoN.foto;                                               // Setto foto = valore della KEY FOTO
-    const elFoto = document.createElement("div");                           // Creo elemento DIV e lo setto in elFoto
-    elFoto.innerHTML = `<img src="img/${foto}" alt="${foto}">`              // Inietto in elFoto, stringa IMG con percorso e ALT uguali alla KEY foto dei vari oggetti
-    elOutput.append(elFoto);                                                // Appendo elFoto a elOutput per visualizzare IMG in pagina
+    const elCard = document.createElement("div");                           // Creo elemento DIV e lo setto come elCard
+    elCard.innerHTML = `<img src="img/${foto}" alt="${foto}">`              // Inietto in elCard, stringa IMG con percorso e ALT uguali alla KEY foto dei vari oggetti
+    elCard.innerHTML += `<div class="n${i}">${oggettoN.nome}</div>`;        // Inietto in elCard, DIV contenente stringa con valore della KEY NOME
+    elCard.innerHTML += `<div class="n${i}">${oggettoN.ruolo}</div>`;       // Inietto in elCard, DIV contenente stringa con valore della KEY RUOLO
+    elOutput.append(elCard);                                                // Appendo elCard in elOutput (mostro in HTML)
 }
