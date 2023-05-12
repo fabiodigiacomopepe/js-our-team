@@ -1,13 +1,16 @@
+/* Regole generali pagina */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Regole output */
 #output {
     padding: 30px;
 }
 
+/* Regole ogni 3 div (per spazieggiatura tra membri del team) */
 div:nth-child(3n+0) {
     margin-bottom: 50px;
 }

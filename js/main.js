@@ -28,7 +28,7 @@ Scott Estrada	Developer	            scott-estrada-developer.jpg
 Barbara Ramos	Graphic Designer	    barbara-ramos-graphic-designer.jpg
 */
 
-
+// Creo ARRAY contenente 6 oggetti, ognuno con proprio NOME, RUOLO, FOTO
 const membriTeam = [
     {
         "nome": "Wayne Barnett",
@@ -62,18 +62,19 @@ const membriTeam = [
     }
 ];
 
+// Setto costante elOutput e la collego all'elemento OUTPUT dell'HTML
 const elOutput = document.getElementById("output");
 
+// Creo ciclo
 for (let i = 0; i < membriTeam.length; i++) {
-    let oggettoN = membriTeam[i];
-    for (let chiave in oggettoN) {
-        console.log(oggettoN[chiave]);
-        infoUtente = oggettoN[chiave];
+    let oggettoN = membriTeam[i];               // Setto che variabile oggettoN dovrà essere l'oggetto dell'array in posizione [i]
+    for (let chiave in oggettoN) {              // Creo ciclo per estrapolare le KEY dagli oggetti in array 
+        console.log(oggettoN[chiave]);          // Loggo informazioni
     }
-    elOutput.innerHTML += `<div class="n${i}">${oggettoN.nome}</div>`;
-    elOutput.innerHTML += `<div class="n${i}">${oggettoN.ruolo}</div>`;
-    let foto = oggettoN.foto;
-    const elFoto = document.createElement("div");
-    elFoto.innerHTML = `<img src="img/${foto}" alt="${foto}">`
-    elOutput.append(elFoto);
+    elOutput.innerHTML += `<div class="n${i}">${oggettoN.nome}</div>`;      // Inietto in elOutput, DIV contenente stringa con valore della KEY NOME
+    elOutput.innerHTML += `<div class="n${i}">${oggettoN.ruolo}</div>`;     // Inietto in elOutput, DIV contenente stringa con valore della KEY RUOLO
+    let foto = oggettoN.foto;                                               // Setto foto = valore della KEY FOTO
+    const elFoto = document.createElement("div");                           // Creo elemento DIV e lo setto in elFoto
+    elFoto.innerHTML = `<img src="img/${foto}" alt="${foto}">`              // Inietto in elFoto, stringa IMG con percorso e ALT uguali alla KEY foto dei vari oggetti
+    elOutput.append(elFoto);                                                // Appendo elFoto a elOutput per visualizzare IMG in pagina
 }
