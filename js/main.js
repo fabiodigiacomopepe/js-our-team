@@ -69,7 +69,11 @@ for (let i = 0; i < membriTeam.length; i++) {
     for (let chiave in oggettoN) {
         console.log(oggettoN[chiave]);
         infoUtente = oggettoN[chiave];
-        elOutput.innerHTML += `<div class="n${i}">${infoUtente}</div>`;
     }
+    elOutput.innerHTML += `<div class="n${i}">${oggettoN.nome}</div>`;
+    elOutput.innerHTML += `<div class="n${i}">${oggettoN.ruolo}</div>`;
+    let foto = oggettoN.foto;
+    const elFoto = document.createElement("div");
+    elFoto.innerHTML = `<img src="img/${foto}" alt="${foto}">`
+    elOutput.append(elFoto);
 }
-
