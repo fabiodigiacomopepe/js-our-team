@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#output {
+    padding: 30px;
+}
+
+div:nth-child(3n+0) {
+    margin-bottom: 20px;
+}
